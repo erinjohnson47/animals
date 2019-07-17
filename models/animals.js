@@ -37,4 +37,4 @@ const animals = [
     }
 ]
 
-modules.exports = app;
+module.exports = animals;
