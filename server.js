@@ -13,8 +13,15 @@ app.use(express.static('public'));
 app.get('/animals', (req, res) => {
     res.render('index.ejs', {
         animals: Animals
-    })
-})
+    });
+});
+
+app.get('/animals/:id', (req, res) => {
+    res.render('show.ejs', {
+        animals: Animals[req.params.id]
+    });
+});
+
 
 app.post('/animals', (req, res) => {
     console.log(req.body);
@@ -33,6 +40,6 @@ app.get('/animals/new', (req, res) => {
 
 app.listen(3000, () => {
     console.log('Listening on port 3000')
-})
+});
 
 module.exports = app;
