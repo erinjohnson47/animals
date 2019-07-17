@@ -22,7 +22,6 @@ app.get('/animals/:id', (req, res) => {
     });
 });
 
-
 app.post('/animals', (req, res) => {
     console.log(req.body);
     if (req.body.isWild === 'on') {
@@ -37,6 +36,11 @@ app.post('/animals', (req, res) => {
 app.get('/animals/new', (req, res) => {
     res.render('new.ejs')
 });
+
+app.delete('/animals/:id', (req, res) => {
+    Animals.splice(req.params.id, 1)
+    res.redirect('/animals')
+})
 
 app.listen(3000, () => {
     console.log('Listening on port 3000')

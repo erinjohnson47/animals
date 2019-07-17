@@ -11,10 +11,18 @@
 <body>
     
     <h1><%= animals.type %></h1></br>
-    <ul>
-        <li>Is it Wild? <%= animals.isWild %></li>
-        <li>Diet : <%= animals.diet %></li>
-    </ul></br>
+    <% if (animals.isWild === true) { %>
+        The <%= animals.type %> is a wild animal and 
+        <% } else { %>
+        The <%= animals.type %> is a domesticated animal and 
+        <% } %>
+    <% if (animals.diet === 'carnivore') { %>
+        is a carnivore.
+        <% } else if (animals.diet === 'herbivore') { %>
+            is a herbivore.
+        <% } else { %>
+            is a omnivore.
+        <% } %></br>
     <img src="<%= animals.img%>"></br>
     <a href="/animals/">Back to home page</a>
 

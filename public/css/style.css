@@ -7,4 +7,6 @@ body {
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
     font-weight: 400;
+    background-image: url('https://i.vimeocdn.com/video/458516040_1280x720.jpg');
+    background-size: cover;
 }
