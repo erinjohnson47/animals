@@ -13,6 +13,7 @@ a database of land animals
 - wild vs domesticated
 - size
 - diet
+- image
 
 ## Project breakdown
 - create folder structure
