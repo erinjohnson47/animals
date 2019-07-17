@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "a database of land animals",
   "main": "server.js",
-  "dependencies": {
-    "ejs": "^2.6.2",
-    "express": "^4.17.1"
   },
   "devDependencies": {},
   "scripts": {
@@ -14,12 +11,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Wong-ton/animals.git"
+    "url": "git+https://github.com/erinjohnson47/animals.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Wong-ton/animals/issues"
+    "url": "https://github.com/erinjohnson47/animals/issues"
   },
-  "homepage": "https://github.com/Wong-ton/animals#readme"
+  "homepage": "https://github.com/erinjohnson47/animals#readme",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1"
+  }
 }
