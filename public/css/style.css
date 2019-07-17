@@ -11,7 +11,8 @@ body {
     align-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: aquamarine;
+    background-image: url('https://i.vimeocdn.com/video/458516040_1280x720.jpg');
+    background-size: cover;
 }
 
 img {
@@ -25,4 +26,5 @@ a {
 }
 a:hover {
     color: violet;
+
 }

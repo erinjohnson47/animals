@@ -46,6 +46,11 @@ app.get('/animals/:id/edit', (req, res) => {
     });
 })
 
+app.delete('/animals/:id', (req, res) => {
+    Animals.splice(req.params.id, 1)
+    res.redirect('/animals')
+})
+
 app.listen(3000, () => {
     console.log('Listening on port 3000')
 });
