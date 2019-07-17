@@ -1,5 +1,5 @@
 # Animals
-a database of land animals
+A partner project to create a database of land animals that you can add to, update, remove, navigate from and index page to a show page, and back to the index page.
 
 ## Land Animals
 - dog
