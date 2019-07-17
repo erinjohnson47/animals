@@ -10,7 +10,7 @@
 </head>
 <body>
     <h1>Edit the <%=animals.type%></h1>
-    <form action='/animals' method='POST'>
+    <form action='/animals/<%=id%>?_method=PUT' method='POST'>
         Animal:<input type='text' name='type' value='<%=animals.type%>' /><br/>
         Is it Wild? <input type="checkbox" name='isWild' <% if (animals.isWild === true) {%>checked<%}%> /> <br/>
         What does it eat? <br/>

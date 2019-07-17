@@ -11,17 +11,12 @@
 <body>
 
     <h1>Animals</h1>
-<<<<<<< HEAD
-    <ul class="animals"> <% for (let i = 0; i < animals.length; i++) { %>
-    <li><a href="/animals/<%=i%>"><%= animals[i].type %></a></li> <% } %>
-=======
     <ul class="animals"><% for (let i = 0; i < animals.length; i++) { %>
-        <li><a href="<%= i %>"><%= animals[i].type %></a><br/>
+        <li><a href="/animals/<%=i%>"><%= animals[i].type %></a><br/>
             <form action="/animals/<%= i %>?_method=DELETE" method="POST">
                 <input type="submit" value="Remove"/>
             </form>
         </li><% } %>
->>>>>>> 1c3ee580a4a77499b4ce61fbccb8e3383959ff2f
     </ul>
     <nav>
     <a href="/animals/new">Add a New Animal</a>

@@ -46,6 +46,16 @@ app.get('/animals/:id/edit', (req, res) => {
     });
 })
 
+app.put('/animals/:id', (req, res) => {
+    if (req.body.isWild === 'on') {
+        req.body.isWild = true;
+    } else {
+        req.body.isWild = false;
+    }
+    Animals[req.params.id] = req.body;
+    res.redirect('/animals')
+})
+
 app.delete('/animals/:id', (req, res) => {
     Animals.splice(req.params.id, 1)
     res.redirect('/animals')
