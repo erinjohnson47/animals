@@ -16,15 +16,20 @@ app.get('/animals', (req, res) => {
     });
 });
 
+app.get('/animals/new', (req, res) => {
+    res.render('new.ejs', {
+        animals: Animals
+    }) 
+});
+
 app.get('/animals/:id', (req, res) => {
     res.render('show.ejs', {
-        animals: Animals[req.params.id]
+        animals: Animals[req.params.id],
+        id: req.params.id
     });
 });
 
-
 app.post('/animals', (req, res) => {
-    console.log(req.body);
     if (req.body.isWild === 'on') {
         req.body.isWild = true;
     } else {
@@ -34,9 +39,12 @@ app.post('/animals', (req, res) => {
     res.redirect('/animals');
 });
 
-app.get('/animals/new', (req, res) => {
-    res.render('new.ejs')
-});
+app.get('/animals/:id/edit', (req, res) => {
+    res.render('edit.ejs', {
+        animals: Animals[req.params.id],
+        id: req.params.id
+    });
+})
 
 app.listen(3000, () => {
     console.log('Listening on port 3000')

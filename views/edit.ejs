@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Raleway:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Edit an Animal</title>
+</head>
+<body>
+    <h1>Edit the <%=animals.type%></h1>
+    <form action='/animals' method='POST'>
+        Animal:<input type='text' name='type' value='<%=animals.type%>' /><br/>
+        Is it Wild? <input type="checkbox" name='isWild' <% if (animals.isWild === true) {%>checked<%}%> /> <br/>
+        What does it eat? <br/>
+        <input type="radio" name="diet" value="carnivore" 
+        <% if (animals.diet === 'carnivore') {%> checked <%}%> /> carnivore<br/>
+        <input type="radio" name="diet" value="herbivore"
+        <% if (animals.diet === 'herbivore') {%> checked <%}%> /> herbivore<br/>
+        <input type="radio" name="diet" value="omnivore"
+        <% if (animals.diet === 'omnivore') {%> checked <%}%> /> omnivore<br/>
+        Link to Image: <input type='text' name='img' value='<%=animals.img%>'/><br/>
+        <input type='submit' name='' value='Submit Changes'/>
+    </form>
+</body>
+</html>
